@@ -1,0 +1,64 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Index</title>  
+    {% load static %}  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
+</head>  
+<body>  
+<form method="POST" class="post-form" action="/employers">  
+        {% csrf_token %}  
+    <div class="container">  
+<br>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <h3>Ajouter un Employé</h3>  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Prénom:</label>  
+    <div class="col-sm-4">  
+      {{form.first_name}}  
+    </div>  
+  </div> 
+      <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Nom:</label>  
+    <div class="col-sm-4">  
+      {{form.last_name}}  
+    </div>  
+  </div>   
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Téléphone:</label>  
+    <div class="col-sm-4">  
+      {{form.phone_number}}  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Email:</label>  
+    <div class="col-sm-4">  
+      {{form.email}} 
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Adresse:</label>  
+    <div class="col-sm-4">  
+      {{form.address}} 
+    </div> 
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Département:</label>  
+    <div class="col-sm-4">  
+      {{form.departement}} 
+    </div> 
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <button type="submit" class="btn btn-primary">Enregistrer</button>  
+    </div>  
+  </div>  
+    </div>  
+</form>  
+</body>  
+</html>  
